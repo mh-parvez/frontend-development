@@ -1,0 +1,33 @@
+
+✅ Step 1. Instal Node.js.
+
+✅ Step 2. Install typescript and ts-node packages globally:
+
+    npm install -g typescript ts-node
+
+✅ Step 3. Install nodemon package to monitor the changes and automatically restart the Node application.
+
+    npm install -g nodemon
+
+✅ Step 4. Create a new directory called nodets and navigate to the project directory:
+    
+    mkdir nodets
+    cd nodets
+
+✅ Step 5. Create a package.json file:
+
+    npm init --yes
+
+✅ Step 6. Create a subdirectory src where you store the TypeScript code:
+   
+    mkdir src
+
+✅ Step 7. Create a new file app.ts in the src directory.
+
+✅ Step 8. Create a nodemon’s configuration file:
+
+✅ Step 9. Change the scripts in the package.json file to the following:
+
+✅ make sure your tsconfig.json includes:
+
+✅ npm start

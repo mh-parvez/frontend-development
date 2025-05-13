@@ -1,0 +1,91 @@
+- version: git -v
+- init a repo: git init
+- status: git status | git status -s
+- stage: git add . | git add filename | git add dirname
+- unstage: git rm --cached filename/foldername
+- commit: git commit -m "message here"
+- show all commit: git log | git log --oneline
+- go to old commit: git checkout COMMIT-ID-HERE  
+- back Main Brach: git checkout BRANCH-NAME
+
+> install: GitLens
+
+- check branch: git branch
+- create new branch: git branch branch-name 
+- go to any branch: git checkout branch-name
+
+- log all commits: git log --all
+- log all commits shorthand: git log --all --oneline
+
+- move HEAD: git checkout COMMIT-ID-HERE | git checkout BRANCH-NAME 
+
+- show graph: git log --all --graph | git log --all --oneline --graph
+- delete branch: git branch --delete branch-name
+
+- marge: git merge branch-name
+
+- remote repo cannection: git remote show origin
+- add remote: git remote add origin https://github.com/mh-parvez/demo.git
+- set (rename) Main Brach: git branch -M main
+- first Time Push: git push -u origin branch-name
+- reguler: git push 
+
+- fetch remote extra commit: git fetch
+- merge remote extra commit on local: git merge origin main
+- merge and fetch (alternative of previous two command): git pull
+
+- reset (hard for delete directly) commit: git reset --hard PREVIOUS-COMMIT-ID
+- reset (soft for move on unstage area) commit: git reset --soft PREVIOUS-COMMIT-ID
+- reset (mixed move on local area) commit: git reset PREVIOUS-COMMIT-ID
+
+- show previous reset commit id: git reflog
+
+- ditocuhed HEAD: git checkout head
+- move head on previous commit: git checkout head~[setNumber]
+
+- reset using head: git reset --hard head~1
+
+# Warrning! : when push the commit, don't reset the commit. alternative is revert option
+- revert commit: git revert CURRRNT-COMMIT-ID
+- revert commit using : git revert head~[setNumber]
+- multiple revert multiple commit: git revert head~[setNumber]..head~[setNumber]
+
+- multiple revert one commit: git revert --no-commit head~[setNumber]..head~[setNumber]
+- abort or go to previous condition: git revert --abort 
+- continue revet: git revert --continue
+
+conflicts > when we change a file in sameline, then we marging it and it will be create git conflict. 
+- when we dont resolve the conflict and need to go previous state: git merge --abort
+
+Stash > when need to move another branch, without creating a commit
+- stash: git stash -m "create a stash"
+- switch to other branch: git checkout BRANCH-NAME
+- stash list: git stash list
+- apply stash: git stash apply [serial-number]
+- drop or remove stash: git stash drop [serial-number]
+- drop or remove all stash: git stash clear
+
+Cherry pick > when we need to merge a specefic commit
+- cherry pick command: git cherry-pick COMMIT-ID
+
+When we need to add ignore commited file in .gitignore file
+- file ignore: git rm --cached style.css
+- folder ignore: git rm --cached -r dist
+
+pull request > user can't create a commit without pull request
+
+- repository: git clone REPO-LINK
+- view remote: git remote
+- details list: git remote -v
+- add another remote: git remote add REMOTE-NAME REMOTE-LINK, example: git remote add base https://github.com/mh-parvez/mhp.dev.git
+- fetch main repo: git fetch base
+- merge: git merge base/main
+- push: git push
+
+- remove file form staging area: git restore --staged .
+- restore deleted file: git checkout PREVIOUS-COMMIT-ID DELETED-FILE-NAME
+
+- open git config file: git config --global -e
+- switch new branch: git switch BRANCH-NAME
+- new branch and switch at a time: git switch -C NEW-BRANCH-NAME
+- revert merged commit: git revert COMMIT-ID -m VALUE, example: git revert 03ahs73 -m 1

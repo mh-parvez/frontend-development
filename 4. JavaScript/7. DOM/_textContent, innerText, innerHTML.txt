@@ -1,0 +1,45 @@
+
+1. Returns:
+   - textContent: All raw text (including hidden elements, no formatting).
+   - innerText: Only visible text (what the user actually sees).
+   - innerHTML: HTML markup, including tags and structure.
+
+2. CSS Visibility (e.g., `display: none`):
+   - textContent: Does NOT care about CSS, includes hidden content.
+   - innerText: Respects CSS, skips hidden elements.
+   - innerHTML: Does NOT care about CSS, includes hidden content.
+
+3. Hidden Elements:
+   - textContent: Included.
+   - innerText: Ignored.
+   - innerHTML: Included.
+
+4. HTML Tags:
+   - textContent: Strips all HTML tags.
+   - innerText: Strips all HTML tags.
+   - innerHTML: Keeps and parses all HTML tags.
+
+5. Line Breaks:
+   - textContent: No line breaks.
+   - innerText: Includes line breaks like how it's shown on screen.
+   - innerHTML: Controlled by tags (e.g. `<br>`, `<p>`).
+
+6. Performance:
+   - textContent: Very fast.
+   - innerText: Slower (forces layout calculation).
+   - innerHTML: Depends on content, can be slower.
+
+7. Safety:
+   - textContent: Very safe for user input.
+   - innerText: Mostly safe.
+   - innerHTML: ❌ Not safe — can cause XSS if misused!
+
+8. Best Use Case:
+   - textContent: Get or set plain text.
+   - innerText: Get or set only what’s visibly rendered.
+   - innerHTML: Get or set full HTML content (including tags).
+
+✅ Tip:
+   - Use `textContent` for safe and fast plain text.
+   - Use `innerText` if you're only interested in what the user sees.
+   - Use `innerHTML` if you need to work with or insert HTML markup.

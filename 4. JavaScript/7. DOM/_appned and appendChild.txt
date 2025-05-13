@@ -1,0 +1,25 @@
+
+✅ appendChild()
+````````````````
+● Appends a Node (element, text, etc.)
+● Only accepts one node at a time
+● Returns the appended node
+● Older and more widely supported
+
+✅ append()
+```````````
+● Can append:
+  → Node
+  → Strings (automatically converted to text nodes)
+● Can append multiple items at once
+● Doesn't return anything
+
+✅ Use append() when:
+`````````````````````
+● You want to insert text and elements together
+● You want to append multiple things at once
+
+✅ Use appendChild() when:
+``````````````````````````
+● You're working only with nodes
+● You need the returned node

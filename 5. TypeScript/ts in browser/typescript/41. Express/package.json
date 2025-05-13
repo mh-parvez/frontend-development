@@ -1,0 +1,20 @@
+{
+  "name": "41.-express",
+  "version": "1.0.0",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "scripts": {
+    "start": "npx tsx --env-file=.env --watch  src/index.ts"
+  },
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.15.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

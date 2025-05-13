@@ -1,0 +1,17 @@
+
+🧱 Node
+````````
+● A Node is the base class for all DOM objects.
+● It can represent:
+  → Element nodes (<div>, <p>, etc.)
+  → Text nodes (the text inside elements)
+  → Comment nodes (<!-- comment -->)
+  → Document nodes (document)
+
+
+🧩 Element
+``````````
+● An Element is a type of Node — specifically, it represents an HTML tag.
+● Examples: <div>, <p>, <a>, <span>, etc.
+
+📌 Think of it like: "Everything in the DOM is a Node, but not every Node is an Element."

@@ -1,0 +1,9 @@
+
+Type: Property
+-----------------
+● Parent: element.parentElement
+● Children: element.children
+● First Child: element.firstElementChild
+● Last Child: element.lastElementChild
+● Next Sibling: element.nextElementSibling
+● Previous Sibling: element.previousElementSibling
